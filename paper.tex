@@ -1,0 +1,144 @@
+\documentclass[journal, a4paper]{IEEEtran}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}   
+\usepackage{amsmath}    
+% V1.6 of IEEEtran contains the IEEEeqnarray family of commands that can
+% be used to generate multiline equations as well as matrices, tables, etc.
+
+% Also of notable interest:
+% Scott Pakin's eqparbox package for creating (automatically sized) equal
+% width boxes. Available:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/supported/eqparbox/
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+
+\usepackage{siunitx}
+\sisetup{output-exponent-marker=\ensuremath{\mathrm{e}}}
+
+
+\begin{document}
+
+	\title{Quantum Walks}
+	\author{preprint}
+	\maketitle
+
+\begin{abstract}
+	Este trabajo es una revisión de los desarrollos recientes sobre la dinámica  de las caminatas cuánticas sobre la linea recta y diferentes tipos de grafos, y de su uso como herramienta para la creación de algoritmos cuánticos. La primera parte es una exposición de los resultados en cadenas de markov y caminatas sobre grafos en el caso clásico. El capítulo siguiente muestra una revisión comparativa sobre caminatas cuánticas.  En la parte final, se presentan y discuten varios algoritmos computacionales basados en diferentes versiones de la cuantización de las caminatas, y se compara la eficiencia de estos algoritmos con su contra parte clásica. La utilidad de estas caminatas se presenta a lo largo del trabajo.
+\end{abstract}
+
+\textbf{\small Keywords: Random walk, quantum walk, quantum algorithm, markov chain}\\
+
+\section{Introduction}
+	\noindent La primera parte es la presentación de las caminatas en tiempo discreto (DTQW) y continuo (CTQW) en forma concreta y correcta. 
+	Esta explicación debe fundirse bien con la de la dinámica de las caminatas. El único análisis extra es la relación entre ambas DTQW y CTQW, que no es evidente. \\
+	
+	\noindent En seguida, una revisión más detenida en el ámbito computacional: la explicación de los algoritmos y la aplicación de las caminatas como modelo computacional. 
+	(Este capítulo necesita un anexo: circuitos cuánticos).\\
+	
+	\noindent Finalmente, una revisión menos profunda, pero amplia de las tendencias del estudio de las caminatas en años más recientes: en la transferencia de información, en geometrías espaciales distintas, en sistemas abiertos, etc.
+	(estos estudios son más recientes  $\sim$ 2012-now, que los de la primera parte $\sim$ 2000-2012).
+	
+	\newpage
+	
+\section{Quantum Walks}
+\subsection{On line}
+Discrete Time Quantum Walks (DTQW)
+\subsection{Decoherence}
+\subsection{Continuous Time Quantum Walks}
+Continuous Time Quantum Walks (CTQW)
+\subsection{on graphs}
+\subsection{Limit relation between CTQW and DTQW}
+
+\section{Dynamics}
+\subsection{Limit distributions}
+\subsection{Perfect State Transfer}
+\subsection{Fractional Revival}
+
+\section{Quantum Walks in quantum Computation}
+\subsection{Decision trees}
+\subsection{Element distinctness}
+\subsection{Search}
+\subsection{Quantum computer model}
+
+\section{Other studies}
+\subsection{Walks on different geometric spaces}
+\subsection{Walks on open systems}
+
+
+\section{Conclusion}
+
+\section{Acknowledgements}
+	
+
+\begin{thebibliography}{1}
+
+	%Each item starts with a \bibitem{reference} command and the details thereafter:
+	
+	\bibitem{a} % Journal
+	\textbf{Last  name,  A.  A.,  Last  name,  B.  B.,  Last  name,  C.  C.} (Year). Title. Journal name, \textbf{volume}: pp-pp.
+	
+	\bibitem{b} % Book
+	\textbf{Last name, A. A.} (year). Title, City, Country: Publisher.
+	
+	\bibitem{c} % Book chapter
+	\textbf{Last name, A. A., Last name, B. B. (Year).} Chapter title.
+    In A. A. Last name. (Ed.), Book title (pp-pp). City, Country: Publisher.
+
+    \bibitem{d} % Journal online
+    \textbf{Last name, A. A.} (Year). Article title. Journal, 
+    \textbf{volume} (issue): pp-pp. Available in http:/ /www...or  DOI
+
+\end{thebibliography}
+
+\newpage
+
+\section{Tables}
+
+\begin{table}[!hbt]
+		% Center the table
+		\begin{center}
+		% Title of the table
+		\caption{Charge to Mass Ratio at Each Point}
+		\label{tab:emRatio}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			$V$ (V) & $R$ (cm) & $e/m$ (C/kg) & $\sigma e/m$ (C/kg) \\
+			\hline
+			24.9 & 3.20 & $2.01 \times 10^{11}$ & $5.18 \times 10^8$\\
+			\hline
+			24.9 & 3.90 & $1.97 \times 10^{11}$ & $5.93 \times 10^8$\\
+			\hline
+			24.9 & 4.50 & $2.16 \times 10^{11}$ & $7.69 \times 10^8$\\
+			\hline
+            24.9 & 5.20 & $2.10 \times 10^{11}$ & $8.40 \times 10^8$\\
+            \hline 
+            24.9 & 5.70 & $2.36 \times 10^{11}$ & $1.08 \times 10^9$\\
+            \hline
+            29.9 & 3.20 & $1.97 \times 10^{11}$ & $4.51 \times 10^8$\\
+            \hline
+            29.9 & 3.90 & $1.99 \times 10^{11}$ & $5.40 \times 10^8$\\
+            \hline
+            29.9 & 4.50 & $2.04 \times 10^{11}$ & $6.39 \times 10^8$\\
+            \hline
+            29.9 & 5.20 & $2.09 \times 10^{11}$ & $7.54 \times 10^8$\\
+            \hline
+            29.9 & 5.70 & $2.28 \times 10^{11}$ & $9.34 \times 10^8$\\
+            \hline
+            35.0 & 3.20 & $1.93 \times 10^{11}$ & $3.99 \times 10^8$\\
+            \hline
+            35.0 & 3.90 & $1.90 \times 10^{11}$ & $4.65 \times 10^8$\\
+            \hline
+            35.0 & 4.50 & $2.06 \times 10^{11}$ & $5.94 \times 10^8$\\
+            \hline
+            35.0 & 5.20 & $2.13 \times 10^{11}$ & $7.12 \times 10^8$\\
+           	\hline
+            35.0 & 5.70 & $2.25 \times 10^{11}$ & $8.42 \times 10^8$\\
+            \hline
+		\end{tabular}
+		\end{center}
+	\end{table}
+
+\end{document}
